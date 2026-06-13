@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function NotFound() {
   const [locale, setLocale] = useState<"en" | "zh">("en");
@@ -20,12 +21,12 @@ export default function NotFound() {
       <div className="text-center px-6">
         <h1 className="text-6xl font-bold gradient-text">{t.title[locale]}</h1>
         <p className="mt-4 text-lg text-[var(--fg-secondary)]">{t.message[locale]}</p>
-        <a
+        <Link
           href={`/${locale}`}
           className="mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[var(--accent-start)] via-[var(--accent-mid)] to-[var(--accent-end)] px-6 py-3 text-sm font-medium text-white shadow-lg hover:shadow-xl transition-all"
         >
           {t.goHome[locale]}
-        </a>
+        </Link>
       </div>
     </div>
   );
