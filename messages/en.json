@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hi, I'm",
+    "name": "Wang Chunkang",
+    "tagline": "Robotics Engineer & Embedded Developer",
+    "subtitle": "Building the future of intelligent machines, from low-level firmware to high-level control systems.",
+    "viewProjects": "View Projects",
+    "readBlog": "Read Blog",
+    "featuredProjects": "Featured Projects",
+    "viewAll": "View all projects →"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "A brief introduction",
+    "bio1": "I'm a robotics engineer passionate about embedded systems, control algorithms, and robot competitions. My work spans from low-level STM32 firmware development to high-level robot control systems using ROS2 and MuJoCo simulation.",
+    "bio2": "As a member of the RoboMaster team, I've developed embedded control frameworks for various robot types including omnidirectional chassis, gimbal systems, and shooting mechanisms. I enjoy bridging the gap between hardware and software.",
+    "education": "Undergraduate student, expected graduation 2028",
+    "skills": "Skills",
+    "experience": "Experience",
+    "social": "Connect",
+    "socialLinks": {
+      "github": "GitHub",
+      "gitee": "Gitee",
+      "email": "Email"
+    },
+    "skillGroups": {
+      "robotics": "Robotics & Control",
+      "embedded": "Embedded Systems",
+      "simulation": "Simulation & Tools",
+      "languages": "Programming Languages"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Thoughts, notes, and learnings",
+    "readMore": "Read more →",
+    "publishedOn": "Published on",
+    "tags": "Tags",
+    "noPosts": "No posts yet. Check back soon!",
+    "comments": "Comments"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Things I've built",
+    "techStack": "Tech Stack",
+    "features": "Key Features",
+    "viewCode": "View Code",
+    "viewDemo": "Live Demo"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a question or want to collaborate?",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "message": "Message",
+    "messagePlaceholder": "What would you like to say?",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again later.",
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailInvalid": "Please enter a valid email",
+      "messageMin": "Message must be at least 10 characters"
+    }
+  },
+  "footer": {
+    "builtWith": "Built with Next.js & Tailwind CSS",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Page not found",
+    "goHome": "Go back home"
+  }
+}

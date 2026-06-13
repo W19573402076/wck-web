@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "blog": "博客",
+    "projects": "项目",
+    "contact": "联系"
+  },
+  "home": {
+    "greeting": "你好，我是",
+    "name": "王纯康",
+    "tagline": "机器人工程师 & 嵌入式开发者",
+    "subtitle": "从底层固件到高层控制系统，构建智能机器的未来。",
+    "viewProjects": "查看项目",
+    "readBlog": "阅读博客",
+    "featuredProjects": "精选项目",
+    "viewAll": "查看所有项目 →"
+  },
+  "about": {
+    "title": "关于我",
+    "subtitle": "简单介绍一下",
+    "bio1": "我是一名机器人工程师，热衷于嵌入式系统、控制算法和机器人竞赛。我的工作涵盖从底层 STM32 固件开发到使用 ROS2 和 MuJoCo 仿真的高层机器人控制系统。",
+    "bio2": "作为 RoboMaster 战队成员，我为各种机器人类型开发了嵌入式控制框架，包括全向底盘、云台系统和射击机构。我享受在硬件和软件之间架起桥梁的过程。",
+    "education": "本科在读，2028 届毕业",
+    "skills": "技能",
+    "experience": "经历",
+    "social": "社交链接",
+    "socialLinks": {
+      "github": "GitHub",
+      "gitee": "Gitee",
+      "email": "邮箱"
+    },
+    "skillGroups": {
+      "robotics": "机器人 & 控制",
+      "embedded": "嵌入式系统",
+      "simulation": "仿真 & 工具",
+      "languages": "编程语言"
+    }
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "思考、笔记与心得",
+    "readMore": "阅读更多 →",
+    "publishedOn": "发布于",
+    "tags": "标签",
+    "noPosts": "还没有文章，敬请期待！",
+    "comments": "评论"
+  },
+  "projects": {
+    "title": "项目",
+    "subtitle": "我做过的东西",
+    "techStack": "技术栈",
+    "features": "核心功能",
+    "viewCode": "查看代码",
+    "viewDemo": "在线演示"
+  },
+  "contact": {
+    "title": "联系我",
+    "subtitle": "有问题或想合作？",
+    "name": "姓名",
+    "namePlaceholder": "你的名字",
+    "email": "邮箱",
+    "emailPlaceholder": "your@email.com",
+    "message": "留言",
+    "messagePlaceholder": "你想说什么？",
+    "send": "发送消息",
+    "sending": "发送中...",
+    "success": "消息已发送！我会尽快回复。",
+    "error": "出了点问题，请稍后再试。",
+    "validation": {
+      "nameRequired": "请输入姓名",
+      "emailInvalid": "请输入有效的邮箱地址",
+      "messageMin": "留言至少需要 10 个字符"
+    }
+  },
+  "footer": {
+    "builtWith": "使用 Next.js & Tailwind CSS 构建",
+    "rights": "保留所有权利。"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "页面未找到",
+    "goHome": "返回首页"
+  }
+}
