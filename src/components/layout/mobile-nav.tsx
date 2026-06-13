@@ -68,8 +68,7 @@ export default function MobileNav({ locale }: { locale: string }) {
               <nav>
                 <ul className="space-y-2">
                   {navKeys.map(({ key, href }) => {
-                    const isActive =
-                      pathname === `/${locale}${href === "/" ? "" : href}`;
+                    const isActive = pathname === href;
                     return (
                       <li key={key}>
                         <Link

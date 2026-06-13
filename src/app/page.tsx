@@ -1,16 +1,19 @@
 "use client";
 
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 /**
  * Root page — detects browser language and redirects to /en or /zh.
- * Static export compatible (no server-side redirect).
+ * Uses Next.js router so basePath is automatically included.
  */
 export default function RootPage() {
+  const router = useRouter();
+
   useEffect(() => {
     const preferred = navigator.language?.startsWith("zh") ? "zh" : "en";
-    window.location.replace(`/${preferred}`);
-  }, []);
+    router.replace(`/${preferred}`);
+  }, [router]);
 
   return (
     <div className="flex h-screen items-center justify-center bg-[var(--bg-primary)]">

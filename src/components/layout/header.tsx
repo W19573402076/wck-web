@@ -46,7 +46,7 @@ export default function Header({ locale }: { locale: string }) {
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-1">
           {navKeys.map(({ key, href }) => {
-            const isActive = pathname === `/${locale}${href === "/" ? "" : href}`;
+            const isActive = pathname === href;
             return (
               <li key={key}>
                 <Link
