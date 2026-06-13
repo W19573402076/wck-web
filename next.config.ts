@@ -5,6 +5,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 const nextConfig: NextConfig = {
   output: "export",
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
+  trailingSlash: true,
   pageExtensions: ["ts", "tsx", "mdx"],
   images: { unoptimized: true },
 };
