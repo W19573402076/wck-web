@@ -7,29 +7,19 @@ import AnimatedSection from "@/components/ui/animated-section";
 import GlassCard from "@/components/ui/glass-card";
 import Button from "@/components/ui/button";
 
-/**
- * Contact form using Formspree (or any form endpoint).
- * For a pure static site, we use Formspree's free tier.
- * Replace FORM_ENDPOINT with your actual endpoint or handle via email.
- */
-const FORM_ENDPOINT = "https://formspree.io/f/your-form-id";
-
 export default function ContactPage() {
   const t = useTranslations("contact");
   const formRef = useRef<HTMLFormElement>(null);
   const [state, setState] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  function validate(formData: FormData): Record<string, string> {
+  function validate(name: string, email: string, message: string): Record<string, string> {
     const errs: Record<string, string> = {};
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const message = formData.get("message") as string;
 
-    if (!name?.trim()) errs.name = t("validation.nameRequired");
-    if (!email?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+    if (!name.trim()) errs.name = t("validation.nameRequired");
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
       errs.email = t("validation.emailInvalid");
-    if (!message?.trim() || message.trim().length < 10)
+    if (!message.trim() || message.trim().length < 10)
       errs.message = t("validation.messageMin");
 
     return errs;
@@ -38,6 +28,9 @@ export default function ContactPage() {
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
+    const name = (formData.get("name") as string) || "";
+    const email = (formData.get("email") as string) || "";
+    const message = (formData.get("message") as string) || "";
 
     // Honeypot check
     if (formData.get("_honeypot")) {
@@ -45,7 +38,7 @@ export default function ContactPage() {
       return;
     }
 
-    const validationErrors = validate(formData);
+    const validationErrors = validate(name, email, message);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
@@ -54,10 +47,10 @@ export default function ContactPage() {
     setState("sending");
 
     try {
-      const res = await fetch(FORM_ENDPOINT, {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name.trim(), email: email.trim(), message: message.trim() }),
       });
 
       if (res.ok) {
