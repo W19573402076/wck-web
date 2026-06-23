@@ -7,6 +7,15 @@ import AnimatedSection from "@/components/ui/animated-section";
 import GlassCard from "@/components/ui/glass-card";
 import Button from "@/components/ui/button";
 
+/**
+ * Contact form that sends emails via EmailJS (pure frontend, no backend needed).
+ * Set the NEXT_PUBLIC_EMAILJS_* environment variables.
+ * Sign up at https://emailjs.com, connect your QQ email, create a template.
+ */
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
+
 export default function ContactPage() {
   const t = useTranslations("contact");
   const formRef = useRef<HTMLFormElement>(null);
@@ -47,10 +56,19 @@ export default function ContactPage() {
     setState("sending");
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name.trim(), email: email.trim(), message: message.trim() }),
+        body: JSON.stringify({
+          service_id: EMAILJS_SERVICE_ID,
+          template_id: EMAILJS_TEMPLATE_ID,
+          user_id: EMAILJS_PUBLIC_KEY,
+          template_params: {
+            from_name: name.trim(),
+            from_email: email.trim(),
+            message: message.trim(),
+          },
+        }),
       });
 
       if (res.ok) {
