@@ -101,7 +101,7 @@ export default function ContactPage() {
               </p>
             </div>
           ) : (
-            <form ref={formRef} onSubmit={handleSubmit} noValidate>
+            <form ref={formRef} onSubmit={handleSubmit} method="POST" noValidate>
               {/* Honeypot */}
               <div className="absolute opacity-0 pointer-events-none" aria-hidden="true">
                 <input type="text" name="_honeypot" tabIndex={-1} autoComplete="off" />
