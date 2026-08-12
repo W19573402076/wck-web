@@ -47,8 +47,9 @@ export const projects: Project[] = [
       ],
     },
     imageUrl: "/images/projects/mujoco-sim.svg",
+    githubUrl: "https://github.com/W19573402076/ball",
     featured: true,
-    year: 2025,
+    year: 2026,
   },
   {
     slug: "mujoco-ball-remote",
@@ -81,7 +82,7 @@ export const projects: Project[] = [
     },
     imageUrl: "/images/projects/mujoco-remote.svg",
     featured: true,
-    year: 2025,
+    year: 2026,
   },
   {
     slug: "basic-framework-omniwheels",
@@ -117,7 +118,7 @@ export const projects: Project[] = [
     imageUrl: "/images/projects/omniwheels.svg",
     giteeUrl: "https://gitee.com/eleven-w/projects",
     featured: true,
-    year: 2025,
+    year: 2026,
   },
   {
     slug: "hero-2026-image-transmission",
