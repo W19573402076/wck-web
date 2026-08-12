@@ -86,7 +86,7 @@ export default async function ProjectsPage({
                     external
                     className="text-xs px-4 py-2"
                   >
-                    GitHub
+                    GitHub ↗
                   </Button>
                 )}
                 {project.giteeUrl && (
