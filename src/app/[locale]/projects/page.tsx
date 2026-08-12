@@ -82,7 +82,7 @@ export default async function ProjectsPage({
                 {project.githubUrl && (
                   <Button
                     href={project.githubUrl}
-                    variant="outline"
+                    variant="ghost"
                     external
                     className="text-xs px-4 py-2"
                   >
