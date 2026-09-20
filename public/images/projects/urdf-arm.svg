@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3"/>
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.3"/>
+    </linearGradient>
+    <linearGradient id="link" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22d3ee"/>
+      <stop offset="50%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" style="stop-color:#f87171;stop-opacity:0.45"/>
+      <stop offset="100%" style="stop-color:#f87171;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0b1120"/>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+
+  <!-- scene grid -->
+  <g stroke="#3b82f6" stroke-width="1" opacity="0.12">
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="290" x2="1200" y2="290"/>
+    <line x1="0" y1="380" x2="1200" y2="380"/>
+  </g>
+
+  <!-- ground shadow -->
+  <ellipse cx="470" cy="392" rx="150" ry="18" fill="#0ea5e9" opacity="0.12"/>
+
+  <!-- base -->
+  <path d="M400 380 L540 380 L520 344 L420 344 Z" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" opacity="0.85"/>
+  <rect x="432" y="326" width="76" height="20" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+
+  <!-- links -->
+  <g stroke="url(#link)" stroke-width="26" stroke-linecap="round" fill="none" opacity="0.9">
+    <line x1="470" y1="326" x2="455" y2="255"/>
+    <line x1="455" y1="255" x2="575" y2="212"/>
+    <line x1="575" y1="212" x2="678" y2="252"/>
+    <line x1="678" y1="252" x2="762" y2="208"/>
+    <line x1="762" y1="208" x2="828" y2="188"/>
+  </g>
+
+  <!-- joints -->
+  <g fill="#0b1120" stroke="#22d3ee" stroke-width="3.5">
+    <circle cx="455" cy="255" r="15"/>
+    <circle cx="575" cy="212" r="15"/>
+    <circle cx="678" cy="252" r="15"/>
+    <circle cx="762" cy="208" r="13"/>
+  </g>
+  <circle cx="470" cy="326" r="13" fill="#0b1120" stroke="#38bdf8" stroke-width="3.5"/>
+
+  <!-- end effector / mocap target -->
+  <line x1="828" y1="188" x2="884" y2="238" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 5" opacity="0.7"/>
+  <circle cx="892" cy="246" r="46" fill="url(#glow)"/>
+  <circle cx="892" cy="246" r="14" fill="#f87171" opacity="0.65" stroke="#fca5a5" stroke-width="2.5"/>
+  <circle cx="892" cy="246" r="24" fill="none" stroke="#f87171" stroke-width="1.5" stroke-dasharray="5 6" opacity="0.55"/>
+  <circle cx="828" cy="188" r="11" fill="#34d399" stroke="#a7f3d0" stroke-width="2"/>
+
+  <text x="600" y="460" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="28" font-weight="600">6-DOF Arm Simulation</text>
+  <text x="600" y="498" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="16">URDF &#183; MuJoCo &#183; Isaac Gym &#183; PPO</text>
+</svg>

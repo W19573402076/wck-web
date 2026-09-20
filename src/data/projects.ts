@@ -14,6 +14,44 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "urdf-arm",
+    title: {
+      en: "6-DOF Arm — URDF / MuJoCo / Isaac Gym / PPO",
+      zh: "六轴机械臂 — URDF / MuJoCo / Isaac Gym / PPO",
+    },
+    shortDescription: {
+      en: "One URDF source, three independent backends: damped least-squares IK drag control in MuJoCo, asset loading in Isaac Gym, and PPO-trained end-effector 6D pose reaching.",
+      zh: "同一份 URDF，三个互相独立的实验后端：MuJoCo 阻尼最小二乘 IK 拖拽控制、Isaac Gym 资产加载、PPO 训练末端 6D 位姿到达。",
+    },
+    longDescription: {
+      en: "A 6-axis manipulator (base_link + Link1~Link6, Joint1~Joint6) exported from SolidWorks as a ROS-format URDF, taken through three separate simulation and learning backends. The MuJoCo backend converts the URDF to MJCF and implements a semi-transparent mocap target ball that can be dragged with Ctrl + mouse; a damped least-squares IK solver runs every frame and drives the end-effector to the target through position servos, converging to 0.000000 mm steady-state error and tracking a moving target within 1~3 mm. The Isaac Gym backend rebuilds the same URDF into a loadable asset with rewritten mesh paths. The RL backend trains a PPO policy on legged_gym — the env subclasses LeggedRobot with zero modifications to legged_gym itself — reaching random 6D poses with 7.6 mm median position error and 0.99 degree median orientation error (90.5% strict success rate) after scaling the network from [256,128,64] to [512,256,128] and training for 20000 iterations. Each backend has its own README documenting the pitfalls actually hit — package:// mesh paths, CAD mesh self-collision, and URDF loading segfaults — each with measured data rather than a one-line verdict.",
+      zh: "一台六轴机械臂（base_link + Link1~Link6，Joint1~Joint6）由 SolidWorks 插件导出为 ROS 格式 URDF，并在三个互相独立的仿真与学习后端上实现。MuJoCo 后端将 URDF 转换为 MJCF，场景中放置一个半透明红色 mocap 目标球，Ctrl + 鼠标拖动即可移动，脚本每帧用阻尼最小二乘 IK 解算关节角并通过位置伺服驱动末端，稳态位置误差收敛到 0.000000 mm，跟踪运动目标时误差约 1~3 mm。Isaac Gym 后端把同一份 URDF 改写网格路径后构建为可加载资产。强化学习后端基于 legged_gym 用 PPO 训练策略（env 继承 LeggedRobot，legged_gym 一行没改），让末端到达随机 6D 位姿，网络从 [256,128,64] 放大到 [512,256,128] 并训练 20000 迭代后，位置误差中位数 7.6 mm、姿态误差中位数 0.99°，严格达标率 90.5%。三个子 README 都记录了实际踩过的坑——package:// 网格路径、CAD 网格自碰撞、URDF 加载段错误——每条都带实测数据。",
+    },
+    techStack: ["Python", "MuJoCo", "Isaac Gym", "PPO", "PyTorch"],
+    features: {
+      en: [
+        "ROS-format URDF exported from SolidWorks CAD",
+        "MuJoCo drag-target control with damped least-squares IK",
+        "0.000000 mm steady-state IK error (1~3 mm while tracking)",
+        "Isaac Gym asset pipeline from the same URDF",
+        "PPO 6D pose reaching on legged_gym, zero framework edits",
+        "7.6 mm / 0.99° median error, 90.5% strict success rate",
+      ],
+      zh: [
+        "SolidWorks 导出的 ROS 格式 URDF",
+        "MuJoCo 拖拽目标 + 阻尼最小二乘 IK",
+        "稳态 IK 误差 0.000000 mm（跟踪目标时 1~3 mm）",
+        "同一份 URDF 构建 Isaac Gym 资产",
+        "基于 legged_gym 的 PPO 6D 位姿到达（框架零改动）",
+        "位置 7.6 mm / 姿态 0.99°，严格达标率 90.5%",
+      ],
+    },
+    imageUrl: "/images/projects/urdf-arm.svg",
+    githubUrl: "https://github.com/W19573402076/URDF_arm",
+    featured: true,
+    year: 2026,
+  },
+  {
     slug: "mujoco-ball-simulation",
     title: {
       en: "MuJoCo Ball Simulation",
