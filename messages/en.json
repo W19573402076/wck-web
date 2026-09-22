@@ -3,8 +3,7 @@
     "home": "Home",
     "about": "About",
     "blog": "Blog",
-    "projects": "Projects",
-    "contact": "Contact"
+    "projects": "Projects"
   },
   "home": {
     "greeting": "Hi, I'm",
@@ -53,25 +52,6 @@
     "features": "Key Features",
     "viewCode": "View Code",
     "viewDemo": "Live Demo"
-  },
-  "contact": {
-    "title": "Get in Touch",
-    "subtitle": "Have a question or want to collaborate?",
-    "name": "Name",
-    "namePlaceholder": "Your name",
-    "email": "Email",
-    "emailPlaceholder": "your@email.com",
-    "message": "Message",
-    "messagePlaceholder": "What would you like to say?",
-    "send": "Send Message",
-    "sending": "Sending...",
-    "success": "Message sent! I'll get back to you soon.",
-    "error": "Something went wrong. Please try again later.",
-    "validation": {
-      "nameRequired": "Name is required",
-      "emailInvalid": "Please enter a valid email",
-      "messageMin": "Message must be at least 10 characters"
-    }
   },
   "footer": {
     "builtWith": "Built with Next.js & Tailwind CSS",

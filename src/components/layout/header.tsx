@@ -13,7 +13,6 @@ const navKeys = [
   { key: "about", href: "/about" },
   { key: "blog", href: "/blog" },
   { key: "projects", href: "/projects" },
-  { key: "contact", href: "/contact" },
 ] as const;
 
 export default function Header({ locale }: { locale: string }) {
