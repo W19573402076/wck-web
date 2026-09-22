@@ -130,16 +130,16 @@ export const projects: Project[] = [
   {
     slug: "basic-framework-omniwheels",
     title: {
-      en: "RM Omnidirectional Chassis — Image Transmission",
-      zh: "RM 全向底盘 — 图传链路",
+      en: "RM Infantry Robot — Image Transmission",
+      zh: "RM 步兵机器人 — 图传链路",
     },
     shortDescription: {
-      en: "RoboMaster omnidirectional chassis control system with image transmission link, based on the YueLu basic_framework.",
-      zh: "基于跃鹿战队 basic_framework 的 RoboMaster 全向底盘控制系统，集成图传链路。",
+      en: "RoboMaster infantry robot control system driving an omnidirectional chassis, with image transmission link, based on the YueLu basic_framework.",
+      zh: "基于跃鹿战队 basic_framework 的 RoboMaster 步兵机器人控制系统，驱动全向底盘，集成图传链路。",
     },
     longDescription: {
-      en: "An embedded control system for RoboMaster omnidirectional chassis based on the YueLu basic_framework. Implements Mecanum/omni wheel kinematics, motor control via CAN bus, and image transmission link for remote monitoring. Built on STM32F407 with FreeRTOS, featuring BSP hardware abstraction, module-level motor/driver encapsulation, and pub-sub message architecture for decoupled app communication.",
-      zh: "基于跃鹿战队 basic_framework 的 RoboMaster 全向底盘嵌入式控制系统。实现麦克纳姆轮/全向轮运动学解算、CAN 总线电机控制、以及用于远程监控的图传链路。基于 STM32F407 + FreeRTOS，采用 BSP 硬件抽象、模块级电机/驱动封装和发布-订阅消息架构实现应用层解耦通信。",
+      en: "An embedded control system for the RoboMaster infantry robot based on the YueLu basic_framework. It drives an omnidirectional chassis with Mecanum/omni wheel kinematics and CAN bus motor control, and includes an image transmission link for remote monitoring. Built on STM32F407 with FreeRTOS, it features BSP hardware abstraction, module-level motor/driver encapsulation, and a pub-sub message architecture for decoupled app communication.",
+      zh: "基于跃鹿战队 basic_framework 的 RoboMaster 步兵机器人嵌入式控制系统。驱动全向底盘，实现麦克纳姆轮/全向轮运动学解算、CAN 总线电机控制，以及用于远程监控的图传链路。基于 STM32F407 + FreeRTOS，采用 BSP 硬件抽象、模块级电机/驱动封装和发布-订阅消息架构实现应用层解耦通信。",
     },
     techStack: ["C", "STM32F4", "FreeRTOS", "CAN Bus", "CMake"],
     features: {

@@ -15,6 +15,6 @@
   <line x1="630" y1="280" x2="800" y2="280" stroke="#a78bfa" stroke-width="3" opacity="0.5"/>
   <rect x="400" y="440" width="400" height="60" rx="8" fill="#3b82f6" opacity="0.15"/>
   <text x="600" y="480" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14">STM32F407 MCU</text>
-  <text x="600" y="560" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="28" font-weight="600">RM Omnidirectional Chassis</text>
+  <text x="600" y="560" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="28" font-weight="600">RM Infantry Robot</text>
   <text x="600" y="600" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="16">Embedded Control + Image Transmission</text>
 </svg>
